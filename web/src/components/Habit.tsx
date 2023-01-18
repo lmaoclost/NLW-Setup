@@ -1,5 +1,5 @@
 interface HabitProps {
-  completed: number
+  completed: number;
 }
 
 export function Habit(props: HabitProps) {
@@ -7,5 +7,5 @@ export function Habit(props: HabitProps) {
     <p className="bg-zinc-900 w-10 h-10 text-white rouded m-2 flex items-center justify-center">
       {props.completed}
     </p>
-  )
+  );
 }
