@@ -7,7 +7,7 @@ import {
   TouchableOpacity,
   View,
 } from "react-native";
-import { Check } from "phosphor-react-native";
+import { Feather } from "@expo/vector-icons";
 import colors from "tailwindcss/colors";
 
 import { BackButton } from "../components/BackButton";
@@ -101,7 +101,7 @@ export function New() {
           activeOpacity={0.7}
           onPress={handleCreateNewHabit}
         >
-          <Check size={20} color={colors.white} />
+          <Feather name="check" size={20} color={colors.white} />
 
           <Text className="font-semibold text-base text-white ml-2">
             Confirmar

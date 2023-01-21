@@ -1,23 +1,19 @@
-import * as Progress from "@radix-ui/react-progress";
-
 interface ProgressBarProps {
   progress: number;
 }
 
-export function ProgressBar({ progress }: ProgressBarProps) {
+export function ProgressBar(props: ProgressBarProps) {
   return (
-    <Progress.Root
-      className="h-3 rounded-xl bg-zinc-700 w-full mt-4"
-      value={progress}
-    >
-      <Progress.Indicator
+    <div className="h-3 rounded-xl bg-zinc-700 w-full mt-4">
+      <div
         role="progressbar"
         aria-label="Progresso de hábitos completados nesse dia"
-        className="h-3 rounded-xl bg-violet-600"
+        aria-valuenow={props.progress}
+        className="h-3 rounded-xl bg-violet-600 transition-all"
         style={{
-          width: `${progress}%`,
+          width: `${props.progress}%`,
         }}
       />
-    </Progress.Root>
+    </div>
   );
 }
